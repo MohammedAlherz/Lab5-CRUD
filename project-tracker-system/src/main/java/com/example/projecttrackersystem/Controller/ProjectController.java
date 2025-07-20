@@ -70,7 +70,7 @@ public class ProjectController {
 
     // Search project by Title
     @GetMapping("/search/{title}")
-    public Object searchTask(@PathVariable String title) {
+    public Object searchProject(@PathVariable String title) {
         for (ProjectModel p : projects) {
             if (Objects.equals(p.getTitle(), title)) {
                 return p;  // return full project info
